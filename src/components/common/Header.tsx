@@ -86,7 +86,7 @@ export default function Header() {
 
   {/* Slide-in Menu for Medium Screens and Smaller */}
   {isMenuOpen && (
-    <div className="lg:hidden fixed top-0 right-0 h-screen w-56 bg-black text-white z-50 transform translate-x-0 transition-transform duration-300">
+    <div className="lg:hidden fixed top-0 right-0 h-screen w-56 bg-bg text-white z-50 transform translate-x-0 transition-transform duration-300">
       {/* Close Button */}
       <button
         className="absolute top-4 right-4 p-2 rounded-md hover:bg-gray-700"
