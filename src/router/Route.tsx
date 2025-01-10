@@ -5,7 +5,7 @@ import MainLayout from "../Layout/MainLayout";
 const Contact = lazy(()=>import("../components/pages/Contact"))
 const Projects = lazy(()=>import("../components/pages/Projects"))
 const AboutMe = lazy(()=>import("../components/pages/AboutMe"))
-const Hero = lazy(()=> import ("../components/pages/Hero"))
+const LandingPage = lazy(()=>import("../components/pages/LandingPage"))
 
 
 const LoadingFallback = () => <div>Loading...</div>; 
@@ -18,7 +18,7 @@ const routeElements = useRoutes([
       element:(
       <Suspense fallback = {<LoadingFallback />}>
          <MainLayout>
-            <Hero />
+            <LandingPage />
          </MainLayout>
       </Suspense>
       )

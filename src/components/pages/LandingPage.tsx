@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 
 import { motion } from "framer-motion";
 import { MagicCard } from "../ui/magic-card";
+import AboutSection from "./AboutMe";
+import Certificate from "./Certificate";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 
 export default function LandingPage() {
@@ -163,6 +167,10 @@ export default function LandingPage() {
           </motion.div>
         </div>
       </div>
+      <AboutSection />
+      <Certificate />
+      <Projects />
+      <Contact />
     </>
   );
 }
