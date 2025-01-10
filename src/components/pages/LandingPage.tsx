@@ -15,10 +15,10 @@ export default function LandingPage() {
   const { handleCopy, success } = useCopyText();
 
   return (
-    <>
-      <div className="min-h-screen w-full text-white p-6 flex flex-col overflow-x-hidden max-w-7xl mx-auto">
+    <main className="min-h-screen p-2 overflow-auto">
+      <div className="text-white flex flex-col max-w-full mx-auto">
         {success && <SuccessAlert />}
-        <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-stretch">
+        <div className="container mx-auto grid sm:grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
           {/* Left Column */}
           <div
             className="absolute inset-0 hidden dark:flex justify-center items-center z-0"
@@ -59,26 +59,28 @@ export default function LandingPage() {
                 <span>Connect with me via email</span>
               </span>
             </button>
+
             {/* Main Heading */}
             <div className="space-y-4 dark:text-white text-black/80 px-4 mr-4">
-              <h1 className="text-4xl lg:text-5xl font-bold">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
                 I&apos;m{" "}
                 <span className="bg-gradient-to-r from-[#67E8F9] to-[#A78BFA] bg-clip-text text-transparent">
                   John Mikko Mejia
                 </span>
                 ,
               </h1>
-              <h2 className="text-3xl lg:text-4xl font-bold leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                 Full Stack Web Developer with Expertise in{" "}
                 <span className="bg-gradient-to-r from-[#67E8F9] to-[#A78BFA] bg-clip-text text-transparent">
                   M.E.R.N
                 </span>{" "}
                 stacks.
               </h2>
-              <p className="text-gray-400 text-lg mt-4">
+              <p className="text-gray-400 text-base sm:text-lg mt-4">
                 "I’m a full stack developer: I break the front-end, and then fix it on the back-end!"
               </p>
             </div>
+
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 z-10">
               <button className="px-6 py-3 bg-primary dark:bg-[#67E8F9] text-white dark:text-black rounded-full font-medium hover:opacity-90 transition-opacity">
@@ -103,7 +105,7 @@ export default function LandingPage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
           >
-            <MagicCard className="cursor-pointer flex-col relative bg-[#0D1117] rounded-lg overflow-hidden group w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl">
+            <MagicCard className="cursor-pointer flex-col relative bg-[#0D1117] rounded-lg overflow-hidden group w-full">
               {/* Spotlight Effect Layer */}
               <div
                 className="absolute inset-0 bg-radial-gradient from-transparent to-[#ffffff40] opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none w-full"
@@ -117,7 +119,7 @@ export default function LandingPage() {
                 <div className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
                 <div className="w-3 h-3 rounded-full bg-[#27C93F]" />
               </div>
-              <pre className="p-6 text-xs sm:text-sm md:text-base lg:text-lg font-mono relative bg-black/80">
+              <pre className="p-4 sm:p-6 text-xs sm:text-sm md:text-base lg:text-lg font-mono relative bg-black/80">
                 <code className="dark:text-white">
                   <span className="text-[#F97583]">const</span>{" "}
                   <span className="text-[#E6F1FF]">profile</span>{" "}
@@ -152,7 +154,7 @@ export default function LandingPage() {
                   {"    "}
                   <span className="text-[#F97583]">return</span> (
                   {"\n"}
-                  {"      "}this.student && this.learner && this.skills.length{" "}
+                  {"      "}this.student && this.skills.length{" "}
                   {">="} 5
                   {"\n"}
                   {"    "});
@@ -171,6 +173,8 @@ export default function LandingPage() {
       <Certificate />
       <Projects />
       <Contact />
-    </>
+    </main>
   );
 }
+
+

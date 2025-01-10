@@ -43,8 +43,8 @@ const blogPosts = [
 
 const Certificate: React.FC = () => {
   return (
-    <div className="w-full bg-bg min-h-screen font-fira">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-8">
+    <section className="p-8 w-full bg-bg min-h-screen font-fira">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8 pt-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Certificates</h2>
           <p className="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-300"></p>
@@ -81,7 +81,7 @@ const Certificate: React.FC = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
