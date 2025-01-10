@@ -1,7 +1,10 @@
-import { Folder, Github, ExternalLink } from 'lucide-react'
+import {  Github, ExternalLink } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-
+import scanning from '../../utils/assets/image/scanning.gif'
+import vite from '../../utils/assets/image/vite.png'
+import brainbox from '../../utils/assets/image/brainbox.png'
+import certigen from '../../utils/assets/image/certigen.jpg'
 interface Project {
   title: string
   description: string
@@ -9,6 +12,7 @@ interface Project {
   githubLink?: string
   externalLink?: string
   status?: string
+  icon?: string
 }
 
 const projects: Project[] = [
@@ -16,21 +20,24 @@ const projects: Project[] = [
     title: "Image Classify (Web)",
     description: "Building a web app that can identify animals what breed they are.",
     technologies: ["React", "Tensorflow.js"],
-    externalLink: "https://padetect.vercel.app/"
+    externalLink: "https://padetect.vercel.app/",
+    icon:scanning,
   },
   {
     title: "EyAi your ai no memory companion",
     description: "A static site like a chatbot gpt-3 that you can ask about anything except your personal life.",
     technologies: ["React", "Gemini", "GPT-3", "TailwindCSS", "Express"],
     githubLink: "https://github.com/itsmejanmicko/eyayFr",
-    externalLink: "https://eyay.vercel.app/"
+    externalLink: "https://eyay.vercel.app/",
+    icon:vite,
   },
   {
     title: "EHalalan",
     description: "A capstone project in our school that is a web app that can help the user to know the candidates and vote online.",
     status: "This is under development case of updates about security and features",
     technologies: ["React", "Node.js", "Express", "MongoDB"],
-    externalLink: "/"
+    externalLink: "/",
+    icon:vite,
   },
   {
     title: "BrainBox",
@@ -38,20 +45,23 @@ const projects: Project[] = [
     status: "Note. Underdevelopment due to backend issues",
     technologies: ["React", "Node.js", "Express", "MongoDB"],
     githubLink: "https://github.com/itsmejanmicko/brainbox",
-    externalLink: "https://github.com/itsmejanmicko/brainbox"
+    externalLink: "https://brainbox-pi.vercel.app/",
+    icon:brainbox,
   },
   {
     title: "Certigen",
     description: "A simple certificate generator that can generate a certificate for the user.",
     technologies: ["React", "TailwindCSS"],
     githubLink: "https://github.com/itsmejanmicko/certigen",
-    externalLink: "https://certigen-zeta.vercel.app/"
+    externalLink: "https://certigen-zeta.vercel.app/",
+    icon:certigen,
   },
   {
     title: "Quiz App",
     description: "I created this quiz app to test my knowledge of React and TypeScript. The app fetches questions from the Open Trivia Database API and displays them to the user.",
     technologies: ["React", "TypeScript"],
-    externalLink: "https://quiz-gold-eta.vercel.app/"
+    externalLink: "https://quiz-gold-eta.vercel.app/",
+    icon:vite,
   }
 ]
 
@@ -77,7 +87,7 @@ export default function Projects() {
           hidden: {},
           show: {
             transition: {
-              staggerChildren: 0.3,  // Delay between each child element's animation
+              staggerChildren: 0.3,  
             },
           },
         }}
@@ -92,7 +102,11 @@ export default function Projects() {
             transition={{ duration: 0.5 }}
           >
             <div className="flex justify-between items-start mb-4">
-              <Folder className="w-10 h-10 text-[#64FFDA]" />
+              {project.externalLink && (
+                <Link to={project.externalLink}>
+                  <img src={project.icon} className="w-10 h-10 text-[#64FFDA]" />
+                </Link>
+              )}
               <div className="flex gap-4">
                 {project.githubLink && (
                   <Link to={project.githubLink} className="text-gray-400 hover:text-[#64FFDA]">

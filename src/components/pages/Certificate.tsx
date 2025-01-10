@@ -66,16 +66,16 @@ const Certificate: React.FC = () => {
                 className="absolute inset-0 h-full w-full object-fit z-0 transition-all  duration-500 group-hover:opacity-100 group-hover:scale-105"  
               />
               {/* Overlay with gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 z-10"></div>
+              <div className="absolute bg-bg/70 inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 z-10"></div>
               {/* Text content */}
               <div className="relative z-20 opacity-100 transition-all duration-500 group-hover:opacity-0">
                 <div className="flex flex-wrap items-center gap-y-1 text-sm text-gray-300">
-                  <time dateTime={post.date} className="mr-8">{post.date}</time>
+                  <time dateTime={post.date} className="mr-8 ">{post.date}</time>
                 </div>
-                <h3 className="mt-3 text-lg font-semibold leading-6 text-white">   
-                    <span className="absolute inset-0"></span>{post.title}
+                <h3 className="mt-3 text-lg font-semibold leading-6 text-[#64ffda]">   
+                    <span className="absolute inset-0 t"></span>{post.title}
                 </h3>
-                <h5 className="text-sm text-[#64ffda]">{post.description}</h5>
+                <h5 className="text-sm ">{post.description}</h5>
               </div>
             </motion.article>
           ))}
