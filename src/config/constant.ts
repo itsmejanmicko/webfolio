@@ -1,0 +1,15 @@
+export const contact = {
+ LETS_WORK_TOGETHER:`Let's work together`,
+ MY_CONTACT_INFO:'mejia.johmmikkoi@outlook.com',
+ MAILTO:'mailto:mejia.johmmikkoi@outlook.com',
+ OR:'Or reach us via: ',
+ CONTACT_ME: 'Contact me',
+ CONTACT: 'Contact',
+ EMAIL: 'Email',
+ PHONE: 'Phone',
+ MESSAGE: 'Message',
+ SEND: 'Send',
+ SUCCESS: 'Success',
+ ERROR: 'Error',
+ NAME: 'Name',
+}
