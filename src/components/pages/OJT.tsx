@@ -57,7 +57,7 @@ export default function OJT() {
                   className="rounded w-32 h-32 object-cover"  // Adjust the size as needed
                 />
               </div>
-              <div className="flex-grow">
+              <div className="flex-grow text-white">
                 <h3 className="font-bold text-2xl mb-2 text-[#64ffda]">Onsite Product Distribution</h3>
                 <p className="text-muted-foreground mb-2 text-lg">Converge Ph</p>
                 <p className="text-sm text-muted-foreground mb-3">March 2023</p>
