@@ -9,6 +9,7 @@ import AboutSection from "./AboutMe";
 import Certificate from "./Certificate";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import OJT from "./OJT";
 
 
 export default function LandingPage() {
@@ -83,9 +84,10 @@ export default function LandingPage() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 z-10">
-              <button className="px-6 py-3 bg-primary dark:bg-[#67E8F9] text-white dark:text-black rounded-full font-medium hover:opacity-90 transition-opacity">
+              <a  href="mailto:mejia.johnmikkoi@outlook.com"
+              className="px-6 py-3 bg-primary dark:bg-[#67E8F9] text-white dark:text-black rounded-full font-medium hover:opacity-90 transition-opacity">
                 Work Together?
-              </button>
+              </a>
               <Link
                 to={import.meta.env.VITE_APP_BLOG}
                 className="px-6 py-3 bg-primary/20 dark:bg-white/10 rounded-full text-black dark:text-white font-medium dark:hover:bg-white/20 transition-colors"
@@ -171,6 +173,7 @@ export default function LandingPage() {
       </div>
       <AboutSection />
       <Certificate />
+      <OJT />
       <Projects />
       <Contact />
     </main>

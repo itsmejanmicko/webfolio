@@ -53,7 +53,7 @@ const Certificate: React.FC = () => {
           {blogPosts.map((post, index) => (
             <motion.article
               key={post.id}  // Reset key when post changes
-              className="relative flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-700 px-8 py-8 pb-8 sm:pt-48 lg:pt-80 group"
+              className="relative flex flex-col justify-end overflow-hidden rounded-2xl hover:bg-none bg-gray-900 dark:bg-gray-700 px-8 py-10 sm:py-12 pb-8 sm:pt-56 lg:pt-80 group"
               initial={{ opacity: 0, y: 50 }} 
               whileInView={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.5, delay: index * 0.2 }} 
@@ -63,10 +63,10 @@ const Certificate: React.FC = () => {
               <img
                 src={post.imgSrc}
                 alt={post.altText}
-                className="absolute inset-0 h-full w-full object-fit z-0 transition-all  duration-500 group-hover:opacity-100 group-hover:scale-105"  
+                className="absolute inset-0 h-full w-full object-cover z-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-105"  
               />
               {/* Overlay with gradient */}
-              <div className="absolute bg-bg/70 inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 z-10"></div>
+              <div className="absolute bg-bg/70 transition-all duration-500 group-hover:bg-transparent inset-0 z-10"></div>
               {/* Text content */}
               <div className="relative z-20 opacity-100 transition-all duration-500 group-hover:opacity-0">
                 <div className="flex flex-wrap items-center gap-y-1 text-sm text-gray-300">
