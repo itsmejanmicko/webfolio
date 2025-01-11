@@ -27,11 +27,11 @@ export default function OJT() {
                   className="rounded w-32 h-32 object-cover"  // Adjust the size as needed
                 />
               </div>
-              <div className="flex-grow">
+              <div className="flex-grow  text-white">
                 <h3 className="font-bold text-2xl mb-2 text-[#64ffda]">Network Engineer</h3>
                 <p className="text-muted-foreground mb-2 text-lg">International Micro Village Inc.</p>
                 <p className="text-sm text-muted-foreground mb-3">April 2023 - August 2023</p>
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg leading-relaxed text-white">
                   Configured network equipment such as <span className="font-medium">Cisco</span> and{" "}
                   <span className="font-medium">Linksys</span>, assisting employees in setting up and configuring{" "}
                   <span className="font-medium">products</span> and directing them to{" "}
@@ -50,7 +50,7 @@ export default function OJT() {
         >
           <Card className="group transition-all duration-300 hover:scale-105 border-[#64ffda]">
             <CardContent className="flex flex-col sm:flex-row gap-6 p-6 bg-bg">
-              <div className="flex-shrink-0 flex justify-center mb-4 sm:mb-0">
+              <div className="flex-shrink-0 flex justify-center mb-4 sm:mb-0  text-white">
                 <img
                   src={router}
                   alt="Onsite Product Distribution"
